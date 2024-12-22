@@ -20,6 +20,13 @@ $ docker-compose up --build
 
 $ docker-compose down
 
+Что бы добавить нового человека в таблицу необходимо вписать в консоль команду:
+
+$ curl -X POST -H "Content-Type: application/json" -d '{"username": "john"}' http://localhost:5000/users
+
+Что бы вывести всех добавленных людей необходима команда:
+
+curl http://localhost:5000/users
 
 ## Работу выполнили
 Мещеряков Радомир 2383, Малюская Дарья 2381
