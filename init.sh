@@ -1,12 +1,11 @@
 #!/bin/sh
-sleep 5  # Wait for database to be ready
+sleep 5  # Ждем, пока база данных будет готова
 
-# check if migrations has been initialized
-if [ ! -d "migrations/versions" ]; then
-    flask db init
-    flask db migrate -m "migration"
-fi
-
-# Apply migrations and start app
+# Инициализация миграций
+flask db init
+flask db migrate -m "Initial migration"
 flask db upgrade
+
+# Запуск приложения
 python app.py
+
