@@ -1,5 +1,5 @@
 FROM python:3.9-slim as builder  
-#slim лучше
+
 WORKDIR /app
 
 COPY requirements.txt .
